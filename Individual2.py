@@ -31,9 +31,6 @@ class Triad:
 class Triangle(Triad):
     def __init__(self, a, b, c):
         super(Triangle, self).__init__(a, b, c)
-        self.alpha = Triad()
-        self.beta = Triad()
-        self.gamma = Triad()
 
     def angles(self):
         self.alpha = int(math.degrees(math.acos((self.b ** 2 + self.c ** 2 - self.a ** 2) / (2 * self.c * self.b))))
