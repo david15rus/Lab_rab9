@@ -29,6 +29,14 @@ class Triangle:
             self.__b = float(parts[1])
             self.__c = float(parts[2])
 
+    def set_sides(self, a, b, c):
+        self.__a = a
+        self.__b = b
+        self.__c = c
+
+    def get_sides(self):
+        return self.__a, self.__b, self.__c
+
     def __per(self):
         return self.__a + self.__b + self.__c
 
@@ -65,6 +73,12 @@ class Triangle:
 
 
 if __name__ == '__main__':
+    # Проверка работы класса
     T1 = Triangle()
     T1.read("Введите стороны трегольника ")
+    T1.dispaly()
+
+    # Изменение сторон и их получение
+    T1.set_sides(5, 5, 5)
+    print(T1.get_sides())
     T1.dispaly()
